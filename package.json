@@ -1,0 +1,57 @@
+{
+  "name": "reshape-md",
+  "version": "1.0.0",
+  "description": "Use Markdown in HTML",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "CC0-1.0",
+  "repository": "jonathantneal/reshape-md",
+  "homepage": "https://github.com/jonathantneal/reshape-md#readme",
+  "bugs": "https://github.com/jonathantneal/reshape-md/issues",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "clean": "git clean -X -d -f",
+    "lint": "npm run lint:ec && npm run lint:js",
+    "lint:ec": "echint",
+    "lint:js": "eslint *.js --cache --ignore-pattern .gitignore",
+    "pre-commit": "echo 'Running pre-commit checks...' && exit 0",
+    "prepublish": "npm test",
+    "tape": "node .tape",
+    "test": "npm run lint && npm run tape"
+  },
+  "engines": {
+    "node": ">=6.5.0"
+  },
+  "dependencies": {
+    "marked": "^0.3.6",
+    "reshape-parser": "^0.2.1"
+  },
+  "devDependencies": {
+    "echint": "^4.0.1",
+    "echint-config-dev": "1.0.0",
+    "eslint": "^3.15.0",
+    "eslint-config-dev": "1.0.0",
+    "pre-commit": "^1.2.2",
+    "reshape": "^0.4.1",
+    "sugarml": "^0.5.0"
+  },
+  "echint": {
+    "extends": "dev"
+  },
+  "eslintConfig": {
+    "extends": "dev"
+  },
+  "pre-commit": [
+    "pre-commit",
+    "test"
+  ],
+  "keywords": [
+    "reshape",
+    "html",
+    "reshape-plugin",
+    "markdown",
+    "md"
+  ]
+}
