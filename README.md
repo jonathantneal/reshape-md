@@ -1,4 +1,4 @@
-# Reshape Markdown [<img src="https://jonathantneal.github.io/reshape-md/logo.svg" alt="Reshape" width="90" height="90" align="right">][Reshape]
+# Reshape Markdown [<img src="https://jonathantneal.github.io/reshape-boilerplate/logo.svg" alt="Reshape" width="90" height="90" align="right">][Reshape]
 
 [![NPM Version][npm-img]][npm-url]
 [![Build Status][cli-img]][cli-url]
@@ -6,7 +6,7 @@
 [![Changelog][log-img]][log-url]
 [![Gitter Chat][git-img]][git-url]
 
-[Reshape Markdown] lets you easily use [Markdown] in HTML.
+[Reshape Markdown] lets you use [Markdown] in HTML.
 
 ```html
 <!-- before -->
@@ -33,9 +33,9 @@ npm install reshape reshape-md --save-dev
 Use [Reshape Markdown] as a plugin:
 
 ```js
-reshape({
+require('reshape')({
 	plugins: [
-		plugin(/* options */)
+		require('reshape-md')(/* Options */)
 	]
 }).process(YOUR_HTML);
 ```

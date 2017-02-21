@@ -1,6 +1,6 @@
 {
   "name": "reshape-md",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use Markdown in HTML",
   "author": "Jonathan Neal <jonathantneal@hotmail.com>",
   "license": "CC0-1.0",
@@ -18,8 +18,8 @@
     "lint:js": "eslint *.js --cache --ignore-pattern .gitignore",
     "pre-commit": "echo 'Running pre-commit checks...' && exit 0",
     "prepublish": "npm test",
-    "tape": "node .tape",
-    "test": "npm run lint && npm run tape"
+    "tape": "reshape-tape",
+    "test": "npm run lint && reshape-tape"
   },
   "engines": {
     "node": ">=6.5.0"
@@ -31,10 +31,11 @@
   "devDependencies": {
     "echint": "^4.0.1",
     "echint-config-dev": "1.0.0",
-    "eslint": "^3.15.0",
-    "eslint-config-dev": "1.0.0",
+    "eslint": "^3.16.0",
+    "eslint-config-dev": "2.0.0",
     "pre-commit": "^1.2.2",
     "reshape": "^0.4.1",
+    "reshape-tape": "^1.0.0",
     "sugarml": "^0.5.0"
   },
   "echint": {

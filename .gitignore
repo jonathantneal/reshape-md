@@ -6,4 +6,4 @@ node_modules
 !.travis.yml
 *.log*
 
-*.result.css
+*.result.html
